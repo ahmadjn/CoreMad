@@ -212,3 +212,25 @@ Jika Anda menemukan bug atau memiliki permintaan fitur:
 - Fitur deteksi device
 - Fitur deteksi negara
 - Fitur deteksi parameter tracking
+
+## Development
+
+### Auto-update Packagist
+
+Package ini menggunakan GitHub Webhook untuk auto-update di Packagist setiap kali ada push ke repository.
+
+Untuk release versi baru:
+1. Update versi di `composer.json`
+2. Commit perubahan
+```bash
+git add composer.json
+git commit -m "Bump version to X.Y.Z"
+```
+3. Create dan push tag
+```bash
+git tag vX.Y.Z
+git push origin vX.Y.Z
+```
+4. Package akan otomatis terupdate di Packagist
+
+> **Catatan**: Webhook sudah dikonfigurasi untuk auto-update saat ada push ke repository.
