@@ -4,6 +4,7 @@ CoreMad adalah package PHP yang menyediakan metode-metode mudah untuk:
 - Deteksi Bot/Crawler
 - Deteksi tipe perangkat (Mobile/Tablet/Computer)
 - Deteksi negara berdasarkan IP address
+- Deteksi parameter tracking (Google Ads, Facebook)
 
 ## Persyaratan
 
@@ -17,6 +18,29 @@ Instalasi package menggunakan Composer:
 ```bash
 composer require coremad/core
 ```
+
+## Fitur
+
+### 1. Deteksi Bot/Crawler
+- Menggunakan library `jaybizzle/crawler-detect`
+- Dapat mendeteksi berbagai jenis bot dan crawler
+- Mendapatkan nama bot jika terdeteksi
+
+### 2. Deteksi Device
+- Menggunakan library `mobiledetect/mobiledetectlib`
+- Deteksi smartphone, tablet, dan desktop
+- Support berbagai user agent header
+
+### 3. Deteksi Negara
+- Menggunakan MaxMind GeoIP2 database
+- Mendapatkan kode dan nama negara
+- Mendapatkan kode dan nama benua
+- Validasi format IP address (IPv4 & IPv6)
+
+### 4. Deteksi Parameter Tracking
+- Google Ads Click ID (gclid)
+- Facebook Click ID (fbclid)
+- Google Ads Source (gad_source)
 
 ## Persiapan Database GeoIP
 
@@ -138,13 +162,30 @@ echo "Error: " . $e->getMessage();
 ## Dependencies
 
 Package ini menggunakan beberapa library pihak ketiga:
-- [jaybizzle/crawler-detect](https://github.com/JayBizzle/Crawler-Detect) untuk deteksi bot
-- [mobiledetect/mobiledetectlib](https://github.com/serbanghita/Mobile-Detect) untuk deteksi perangkat
-- [geoip2/geoip2](https://github.com/maxmind/GeoIP2-php) untuk deteksi negara
+- [jaybizzle/crawler-detect](https://github.com/JayBizzle/Crawler-Detect) v1.2 - untuk deteksi bot
+- [mobiledetect/mobiledetectlib](https://github.com/serbanghita/Mobile-Detect) v3.74 - untuk deteksi perangkat
+- [geoip2/geoip2](https://github.com/maxmind/GeoIP2-php) v2.13 - untuk deteksi negara
+
+## Versioning
+
+Package ini menggunakan [Semantic Versioning](https://semver.org/):
+- MAJOR version (X.0.0) - perubahan yang tidak backward compatible
+- MINOR version (0.X.0) - penambahan fitur yang backward compatible
+- PATCH version (0.0.X) - bug fixes yang backward compatible
+
+## Security
+
+Jika Anda menemukan masalah keamanan, mohon jangan buat issue publik.
+Silakan kirim email ke ahmadjn01@gmail.com
 
 ## Kontribusi
 
-Kontribusi selalu diterima! Silakan buat pull request di repository GitHub.
+Kontribusi selalu diterima! Berikut langkah-langkahnya:
+1. Fork repository
+2. Buat branch baru (`git checkout -b feature/AmazingFeature`)
+3. Commit perubahan (`git commit -m 'Add some AmazingFeature'`)
+4. Push ke branch (`git push origin feature/AmazingFeature`)
+5. Buat Pull Request
 
 ## Lisensi
 
@@ -154,7 +195,20 @@ Package ini dilisensikan di bawah [Lisensi MIT](LICENSE).
 
 - **Ahmad Jamaluddin**
 - Email: ahmadjn01@gmail.com
+- GitHub: [ahmadjn](https://github.com/ahmadjn)
 
 ## Support
 
-Jika Anda menemukan bug atau memiliki permintaan fitur, silakan buat issue di repository GitHub.
+Jika Anda menemukan bug atau memiliki permintaan fitur:
+1. Buat issue di GitHub repository
+2. Kirim email ke ahmadjn01@gmail.com
+3. Submit pull request dengan perbaikan
+
+## Changelog
+
+### [1.0.0] - 2024-03-XX
+- Initial release
+- Fitur deteksi bot/crawler
+- Fitur deteksi device
+- Fitur deteksi negara
+- Fitur deteksi parameter tracking
