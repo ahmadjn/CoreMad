@@ -80,6 +80,38 @@ echo "Error: " . $e->getMessage();
 }
 ```
 
+### Deteksi Parameter Tracking
+
+Package ini juga dapat mendeteksi parameter tracking dari Google Ads dan Facebook:
+
+```php
+// Cek Google Click ID (gclid)
+if ($coreMad->hasGoogleClickId()) {
+    echo "Google Click ID: " . $coreMad->getGoogleClickId();
+}
+
+// Cek Facebook Click ID (fbclid)
+if ($coreMad->hasFacebookClickId()) {
+    echo "Facebook Click ID: " . $coreMad->getFacebookClickId();
+}
+
+// Cek Google Ads Source (gad_source)
+if ($coreMad->hasGoogleAdsSource()) {
+    echo "Google Ads Source: " . $coreMad->getGoogleAdsSource();
+}
+
+// Dapatkan semua parameter tracking sekaligus
+$trackingParams = $coreMad->getTrackingParams();
+print_r($trackingParams);
+/* Output:
+[
+    'gclid' => 'google_click_id_value',
+    'fbclid' => 'facebook_click_id_value',
+    'gad_source' => 'google_ads_source_value'
+]
+*/
+```
+
 ## Penanganan Error
 
 Package ini menggunakan exception untuk menangani error. Beberapa error yang mungkin terjadi:
