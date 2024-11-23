@@ -1,6 +1,7 @@
 {
   "name": "coremad/core",
   "description": "Core package for detecting user agent, device, and location",
+  "version": "1.0.0",
   "type": "library",
   "license": "MIT",
   "autoload": {
