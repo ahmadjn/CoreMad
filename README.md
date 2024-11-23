@@ -15,8 +15,16 @@ CoreMad adalah package PHP yang menyediakan metode-metode mudah untuk:
 ## Instalasi
 
 Instalasi package menggunakan Composer:
+
 ```bash
+# Instalasi versi stable
 composer require coremad/core
+
+# Atau instalasi dengan versi spesifik
+composer require coremad/core:^1.0
+
+# Atau instalasi versi dev
+composer require coremad/core:dev-main
 ```
 
 ## Fitur

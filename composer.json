@@ -21,7 +21,8 @@
     "mobiledetect/mobiledetectlib": "^3.74",
     "geoip2/geoip2": "^2.13"
   },
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "config": {
     "sort-packages": true,
     "optimize-autoloader": true
